@@ -11,12 +11,12 @@ import {
 } from "./loginStyle";
 import mealSvg from "../../assets/meal2.svg";
 
-const Login = ({ setIsAuth, isAuth }) => {
+const Login = ({ setAuth, auth }) => {
   let history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setIsAuth(true);
+    setAuth(!auth);
     history.push("/");
   };
   return (
